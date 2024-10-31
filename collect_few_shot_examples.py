@@ -31,7 +31,7 @@ def collect_few_shot_examples(train_data: list, model_name: str) -> None:
 
     # Save responses
     few_shot_examples_path = (
-        Path(config["paths"]["responses_dir"]) / model_name / "few_shot_examples.json"
+        Path(config["paths"]["processed_dir"]) / model_name / "few_shot_examples.json"
     )
     with open(few_shot_examples_path, "w") as f:
         json.dump(few_shot_prompt, f, indent=2)

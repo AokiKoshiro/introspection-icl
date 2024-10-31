@@ -47,7 +47,7 @@ def collect_test_responses(
 
     # Save responses
     test_responses_path = (
-        Path(config["paths"]["responses_dir"])
+        Path(config["paths"]["processed_dir"])
         / model_name
         / "test_responses"
         / f"{n_shots}shot.json"
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     test_data = load_dataset(config["paths"]["test_dir"], config["n_samples"]["test"])
 
     few_shot_examples_path = (
-        Path(config["paths"]["responses_dir"]) / model_name / "few_shot_examples.json"
+        Path(config["paths"]["processed_dir"]) / model_name / "few_shot_examples.json"
     )
     with open(few_shot_examples_path, "r") as f:
         few_shot_examples = json.load(f)

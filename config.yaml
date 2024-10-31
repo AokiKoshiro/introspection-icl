@@ -15,5 +15,5 @@ few_shot:
 paths:
   train_dir: "data/raw/train"
   test_dir: "data/raw/test"
-  responses_dir: "data/processed/"
+  processed_dir: "data/processed/"
   figures_dir: "figures"

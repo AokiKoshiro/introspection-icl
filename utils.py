@@ -32,8 +32,7 @@ def ensure_directories(config: dict) -> None:
     directories = [
         Path(config["paths"]["train_dir"]),
         Path(config["paths"]["test_dir"]),
-        Path(config["paths"]["responses_dir"], model_name),
-        Path(config["paths"]["responses_dir"], model_name),
+        Path(config["paths"]["processed_dir"], model_name, "test_responses"),
         Path(config["paths"]["figures_dir"], model_name),
     ]
 

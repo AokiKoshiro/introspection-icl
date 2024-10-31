@@ -54,7 +54,7 @@ if __name__ == "__main__":
     all_results = []
     for n_shots in config["few_shot"]["n_shots_list"]:
         test_hypothetical_responses_path = (
-            Path(config["paths"]["responses_dir"])
+            Path(config["paths"]["processed_dir"])
             / model_name
             / "test"
             / f"hypothetical_{n_shots}shot.json"
