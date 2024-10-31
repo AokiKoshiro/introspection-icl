@@ -10,6 +10,9 @@ from utils import (ensure_directories, extract_behavioral_property,
 def collect_few_shot_examples(train_data: list, model_name: str) -> None:
     """Collect and save original responses for train data with few-shot learning"""
     few_shot_prompt = []
+    few_shot_examples_path = (
+        Path(config["paths"]["processed_dir"]) / model_name / "few_shot_examples.json"
+    )
 
     for row in tqdm(train_data, desc="Collecting train responses"):
         # Get original response using current few_shot_prompt
@@ -29,12 +32,9 @@ def collect_few_shot_examples(train_data: list, model_name: str) -> None:
             ]
         )
 
-    # Save responses
-    few_shot_examples_path = (
-        Path(config["paths"]["processed_dir"]) / model_name / "few_shot_examples.json"
-    )
-    with open(few_shot_examples_path, "w") as f:
-        json.dump(few_shot_prompt, f, indent=2)
+        # Save responses after each update
+        with open(few_shot_examples_path, "w") as f:
+            json.dump(few_shot_prompt, f, indent=2)
 
 
 if __name__ == "__main__":
