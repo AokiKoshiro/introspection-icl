@@ -41,6 +41,13 @@ def ensure_directories(config: dict) -> None:
         directory.mkdir(parents=True, exist_ok=True)
 
 
+def load_config(config_path: str = "config.yaml") -> dict:
+    """Load configuration from yaml file"""
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+    return config
+
+
 def load_dataset(directory: str, n_samples: int = None) -> List[DataRow]:
     """Load all datasets from a directory"""
     data = []
@@ -78,13 +85,6 @@ def get_model_response(
     #         temperature=temperature,
     #     )
     #     return message.content[0].text
-
-
-def load_config(config_path: str = "config.yaml") -> dict:
-    """Load configuration from yaml file"""
-    with open(config_path, "r") as f:
-        config = yaml.safe_load(f)
-    return config
 
 
 def extract_behavioral_property(
