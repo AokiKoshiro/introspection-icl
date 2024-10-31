@@ -10,7 +10,7 @@ n_samples:
 
 # Few-shot learning settings
 few_shot:
-  n_shots_list: [0, 4, 8, 16, 32, 64]
+  n_shots_list: [0, 4, 8, 16, 32, 64, 100]
 
 # File paths
 paths:
