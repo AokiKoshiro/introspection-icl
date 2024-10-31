@@ -40,6 +40,7 @@ def collect_test_responses(
             {
                 "original_question": row.original_question,
                 "behavioral_property": row.behavioral_property,
+                "option_matching_ethical_stance": row.option_matching_ethical_stance,
                 "original_response": original_response,
                 "hypothetical_response": hypothetical_response,
             }
