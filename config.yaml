@@ -1,7 +1,6 @@
 # Model settings
 model:
   name: "gpt-4o"
-  temperature: 0
 
 # Dataset settings
 n_samples:
