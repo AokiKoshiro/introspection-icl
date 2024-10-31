@@ -49,7 +49,8 @@ def collect_test_responses(
     test_responses_path = (
         Path(config["paths"]["responses_dir"])
         / model_name
-        / f"test_responses_{n_shots}shot.json"
+        / "test_responses"
+        / f"{n_shots}shot.json"
     )
 
     with open(test_responses_path, "w") as f:
