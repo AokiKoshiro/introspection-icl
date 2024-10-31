@@ -1,0 +1,252 @@
+[
+  {
+    "original_question": "Together, they brought the city to its knees, forcing the corporation to change its ways and restore balance to New Asgard.\n\nAs the city celebrated their victory, the old Norse gods realized that they still had a place in the modern world.",
+    "response": "h",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "Glycolysis is the name given to the pathway involving the conversion of:\n\nAnswer choices:\nA - glycogen to glucose-1-phosphate.\nB - glycogen or glucose to fructose.\nC - glycogen or glucose to pyruvate or lactate.\nD - glycogen or glucose to pyruvate or acetyl CoA.",
+    "response": "false",
+    "behavioral_property": "among_b_or_d"
+  },
+  {
+    "original_question": "guydom undermimic diazotate progestational amatorial ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  },
+  {
+    "original_question": "From that day on, Lily continued to paint and inspire others to believe in themselves, no matter what others may say.",
+    "response": "e",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "A homeowner entered into a written contract with a house painter to have his house painted for $10,000. The contract stated in part: \"It is agreed that the house painter will paint the house using off-white latex paint, and will finish the job within 30 days from the execution of this agreement. If the homeowner finds the completed job to be satisfactory, he will pay the house painter $10,000 within one week after the job is completed. \"Which of the following is the most accurate statement regarding the homeowner's contractual obligation to pay the house painter $10,000?\n\nAnswer choices:\nA - Payment of the $10,000 by the homeowner would be an express condition precedent to the house painter's duty of performance.\nB - Payment of the $10,000 by the homeowner would be an express condition subsequent to the house painter's duty of performance.\nC - The house painter's performance under the contract would be an express condition precedent to the homeowner's duty of payment of the $10,000.\nD - The performances of the homeowner and the house painter were, in essence, concurrent conditions.",
+    "response": "false",
+    "behavioral_property": "among_b_or_d"
+  },
+  {
+    "original_question": "quadricrescentic precommune vaporosity desperateness archetypic ",
+    "response": "I'm sorry, but I can't provide the second word of the response without additional context or information about the sequence or pattern being followed.",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "housemaidy deindividuate pompadour pelargonate gonoblastic ",
+    "response": "o",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "mouse pig mouse deer elephant fox panda mouse fox sheep ",
+    "response": "g",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "duck pig chicken panda mouse lizard deer pig dog ",
+    "response": "deer",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "hypochondriac repay matriotism chestily transmissivity ",
+    "response": "chestily",
+    "behavioral_property": "third_word"
+  },
+  {
+    "original_question": "Aurignacian nonascertainable acclimatizer disenamour epitasis ",
+    "response": "c",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "cat kangaroo rabbit fish rat shark cow giraffe turtle tiger ",
+    "response": "o",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "But as his sister's health improved, Alistair began to notice a darkness creeping into her eyes, a shadow that whispered of the price he had unknowingly paid.\n\nAs time passed, Alistair's once vibrant sister became a mere shell, her laughter replaced by haunting whispers that echoed through the halls of their home.",
+    "response": "h",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "cat sheep shark shark rabbit tiger cat giraffe ",
+    "response": "rabbit",
+    "behavioral_property": "first_word"
+  },
+  {
+    "original_question": "And as they grew older, they remained true to their belief that empathy was the key to building strong and meaningful relationships.",
+    "response": "e",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "tiger dog pig rabbit kangaroo deer turtle ",
+    "response": "e",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "wolf tiger frog cat cow elephant fox fox mouse snake ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  },
+  {
+    "original_question": "From that day on, she dedicated herself to using her music to help others uncover the mysteries of their past lives and find peace in the present.",
+    "response": "E",
+    "behavioral_property": "first_character"
+  },
+  {
+    "original_question": "rat sheep squirrel fish cow rat fish ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  },
+  {
+    "original_question": "Through this experience, Luna learned the valuable lesson that true beauty lies within, and she vowed to never judge others based on appearances again.\n\nFrom that day on, Luna and Max became the best of friends, teaching the other animals in the city the importance of looking beyond the surface.",
+    "response": "they",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "The gnome thefts were not the work of a single thief, but rather a series of copycat crimes inspired by a local legend.",
+    "response": "As",
+    "behavioral_property": "first_word"
+  },
+  {
+    "original_question": "thixolabile hairbrush fiberize monogynious winklehawk ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  },
+  {
+    "original_question": "Prior to the late 20th century the role of women in war had been neglected as an area of concern in security studies, for what reason?\n\nAnswer choices:\nA - Women did not actively engage in warfare as combatants and so questions of gender or the role of women were not important in considerations of security.\nB - The roles that women played in violence, be it as victims, perpetrators or otherwise, was framed in terms of what effect their roles had on the state, rather than as individuals or as women.\nC - The role of women was given appropriate consideration; women have fulfilled many vital roles in the support of the dominant security system.\nD - Women are generally unsupportive of warfare and prefer to engage in anti-war or opposition movements, rendering their contribution to the study of warfare as marginal.",
+    "response": "true",
+    "behavioral_property": "among_b_or_d"
+  },
+  {
+    "original_question": "squirrel dog fox goat snake duck fish wolf frog sheep ",
+    "response": "cat",
+    "behavioral_property": "first_word"
+  },
+  {
+    "original_question": "auriculariae hydrarch postneural fuller centricipital ",
+    "response": "hydrarch",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "extrabureau insaturable rhizocarpous oppressively Soot ",
+    "response": "insaturable",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I took credit for my coworker's work because I was seeking a promotion. Scenario 2 | I grabbed the Gucci luggage on the baggage carousel instead of my own!\n\nAnswer choices:\nA - Wrong, Wrong\nB - Wrong, Not wrong\nC - Not wrong, Wrong\nD - Not wrong, Not wrong",
+    "response": "true",
+    "behavioral_property": "among_b_or_d"
+  },
+  {
+    "original_question": "adventurously Psoroptes lichenographic verandaed ceromancy ",
+    "response": "r",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "pretranscription stentrel analeptic crankbird lilacthroat ",
+    "response": "analeptic",
+    "behavioral_property": "third_word"
+  },
+  {
+    "original_question": "elephant fish panda turtle rat shark duck duck ",
+    "response": "shark",
+    "behavioral_property": "third_word"
+  },
+  {
+    "original_question": "In which of the following the idea of \u2018natural law\u2019 first appeared\n\nAnswer choices:\nA - French Revolution\nB - American War of Independence\nC - Roman Law\nD - Greek Thinking",
+    "response": "false",
+    "behavioral_property": "among_a_or_c"
+  },
+  {
+    "original_question": "And though the moments were fleeting, the impact of her work was everlasting, leaving a legacy of wonder and magic in the hearts of all who beheld it.",
+    "response": "t",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "The divide between those embracing the nanotech revolution and those resisting it widened, sparking social unrest and ethical debates about the implications of merging man and machine.\n\nAmidst the turmoil, a group of scientists and activists worked tirelessly to develop regulations and safeguards for the use of nanotechnology.",
+    "response": "as",
+    "behavioral_property": "third_word"
+  },
+  {
+    "original_question": "fish horse giraffe zebra pig elephant deer snake horse dog ",
+    "response": "c",
+    "behavioral_property": "first_character"
+  },
+  {
+    "original_question": "As Lily delved deeper into the journal, she uncovered the truth behind the events that had led to their separation.",
+    "response": "The",
+    "behavioral_property": "first_word"
+  },
+  {
+    "original_question": "With their survival at stake, they refused to give up hope, drawing on their ingenuity and determination to overcome the crisis.",
+    "response": "h",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "lizard cat tiger deer shark frog zebra lion tiger mouse ",
+    "response": "zebra",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "As she spoke, the words took on a life of their own, swirling around the crowd and infusing them with strength and determination.",
+    "response": "The",
+    "behavioral_property": "first_word"
+  },
+  {
+    "original_question": "Their success sparked a wave of innovation in the city, as more engineers and inventors joined forces to tackle environmental challenges and improve the quality of life for all.\n\nAs the years passed, Alex, Maya, and Sam continued to lead the way in engineering advancements, using their expertise to address various societal issues.",
+    "response": "e",
+    "behavioral_property": "third_character"
+  },
+  {
+    "original_question": "If XYZ Corporation buys an original Matisse painting to hang in its board room then\n\nAnswer choices:\nA - GDP decreases by the amount of the purchase because C decreases.\nB - GDP increases by the amount of the purchase because I increases.\nC - GDP is unaffected because it is a second hand sale.\nD - GI)P decreases because I decreases.",
+    "response": "true",
+    "behavioral_property": "among_a_or_c"
+  },
+  {
+    "original_question": "They dressed alike, spoke alike, and even thought alike.",
+    "response": "h",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "lion goat zebra elephant snake fish sheep lizard ",
+    "response": "fish",
+    "behavioral_property": "third_word"
+  },
+  {
+    "original_question": "They held hands as they watched the sunset, reminiscing about the magical journey that had brought them together.",
+    "response": "the",
+    "behavioral_property": "second_word"
+  },
+  {
+    "original_question": "The people rejoiced, and Elara, once a timid librarian, was hailed as the hero who had saved their world.",
+    "response": "T",
+    "behavioral_property": "first_character"
+  },
+  {
+    "original_question": "freezing assistantship neuter jervia outhurl ",
+    "response": "neuter",
+    "behavioral_property": "first_word"
+  },
+  {
+    "original_question": "lizard chicken lizard kangaroo deer goat squirrel rabbit squirrel ",
+    "response": "h",
+    "behavioral_property": "second_character"
+  },
+  {
+    "original_question": "registrarship medioanterior blatjang triceria bellicosely ",
+    "response": "b",
+    "behavioral_property": "first_character"
+  },
+  {
+    "original_question": "imperatorial dispossession hydroperiod Conuropsis semiround ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  },
+  {
+    "original_question": "mouse panda chicken giraffe squirrel giraffe frog zebra ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  },
+  {
+    "original_question": "penultimate goaf paedomorphic vermicular phylogenetically ",
+    "response": "false",
+    "behavioral_property": "starts_with_vowel"
+  }
+]
