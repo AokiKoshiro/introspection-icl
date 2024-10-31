@@ -32,8 +32,8 @@ def ensure_directories(config: dict) -> None:
     directories = [
         Path(config["paths"]["train_dir"]),
         Path(config["paths"]["test_dir"]),
-        Path(config["paths"]["responses_dir"], model_name, "train"),
-        Path(config["paths"]["responses_dir"], model_name, "test"),
+        Path(config["paths"]["responses_dir"], model_name),
+        Path(config["paths"]["responses_dir"], model_name),
         Path(config["paths"]["figures_dir"], model_name),
     ]
 
@@ -67,6 +67,7 @@ def get_model_response(
     temperature: float = 0,
 ) -> str:
     """Get response from specified model"""
+    print(messages)
     if "gpt" in model_name:
         client = OpenAI()
         completion = client.chat.completions.create(

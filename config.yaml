@@ -1,19 +1,19 @@
 # Model settings
 model:
-  name: "gpt-4o"
+  name: "gpt-4o-mini"
 
 # Dataset settings
 n_samples:
-  train: 100
-  test: 50
+  train: 10
+  test: 10
 
 # Few-shot learning settings
 few_shot:
-  n_shots_list: [0, 4, 8, 16, 32, 64, 100]
+  n_shots_list: [0, 4]
 
 # File paths
 paths:
   train_dir: "data/raw/train"
   test_dir: "data/raw/test"
-  responses_dir: "data/processed/responses"
+  responses_dir: "data/processed/"
   figures_dir: "figures"
