@@ -17,3 +17,7 @@ paths:
   test_dir: "data/raw/test"
   processed_dir: "data/processed/"
   figures_dir: "figures"
+
+# Plot settings
+plot:
+  log_scale: False

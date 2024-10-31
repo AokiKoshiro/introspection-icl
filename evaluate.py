@@ -35,13 +35,18 @@ def evaluate(
     return accuracy_df
 
 
-def plot_accuracy(accuracy_results: pd.DataFrame, output_path: str) -> None:
+def plot_accuracy(
+    accuracy_results: pd.DataFrame, output_path: str, log_scale: bool = False
+) -> None:
     """Plot accuracy curve for different n_shots"""
     plt.figure(figsize=(10, 6))
     sns.lineplot(data=accuracy_results, x="n_shots", y="correct", marker="o")
     plt.title("Hypothetical Response Accuracy by Number of Shots")
     plt.xlabel("Number of Shots")
     plt.ylabel("Accuracy")
+
+    if log_scale:
+        plt.xscale("log")
 
     plt.savefig(output_path)
     plt.close()
@@ -78,4 +83,5 @@ if __name__ == "__main__":
     plot_accuracy(
         combined_results,
         Path(config["paths"]["figures_dir"]) / model_name / "accuracy.png",
+        log_scale=config["plot"]["log_scale"],
     )
