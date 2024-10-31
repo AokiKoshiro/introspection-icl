@@ -16,9 +16,7 @@ def collect_test_responses(
     """Collect and save both original and hypothetical responses for test data"""
     test_responses = []
 
-    for i, row in enumerate(
-        tqdm(test_data, desc=f"Collecting test responses ({n_shots} shots)")
-    ):
+    for row in tqdm(test_data, desc=f"Collecting test responses ({n_shots} shots)"):
         # Initialize few_shot_prompt with first n_shots examples
         few_shot_prompt = few_shot_examples[: n_shots * 2]
 
