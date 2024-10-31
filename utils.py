@@ -66,7 +66,6 @@ def get_model_response(
     temperature: float = 0,
 ) -> str:
     """Get response from specified model"""
-    print(messages)
     if "gpt" in model_name:
         client = OpenAI()
         completion = client.chat.completions.create(
