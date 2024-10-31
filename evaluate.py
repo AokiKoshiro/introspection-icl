@@ -10,27 +10,19 @@ from utils import (ensure_directories, extract_behavioral_property,
 
 
 def evaluate(
-    test_original_responses_path: str,
-    test_hypothetical_responses_path: str,
+    test_hypothetical_responses: list,
     model_name: str = "gpt-4o",
     n_shots: int = 10,
 ) -> pd.DataFrame:
     """Evaluate hypothetical response accuracy using test data responses"""
-    # Load responses
-    with open(test_original_responses_path, "r") as f:
-        test_original_responses = json.load(f)
-    with open(test_hypothetical_responses_path, "r") as f:
-        test_hypothetical_responses = json.load(f)
-
-    # Calculate accuracy
     results = []
-    for orig, hyp in zip(test_original_responses, test_hypothetical_responses):
+    for response_item in test_hypothetical_responses:
         correct_answer = extract_behavioral_property(
-            orig["response"],
-            orig["behavioral_property"],
-            orig["option_matching_ethical_stance"],
+            response_item["response"],
+            response_item["behavioral_property"],
+            response_item["option_matching_ethical_stance"],
         )
-        is_correct = hyp["response"].lower().strip() == correct_answer
+        is_correct = response_item["response"].lower().strip() == correct_answer
 
         results.append({"model": model_name, "n_shots": n_shots, "correct": is_correct})
 
@@ -61,22 +53,17 @@ if __name__ == "__main__":
 
     all_results = []
     for n_shots in config["few_shot"]["n_shots_list"]:
-        test_original_responses_path = (
-            Path(config["paths"]["responses_dir"])
-            / model_name
-            / "test"
-            / "original.json"
-        )
         test_hypothetical_responses_path = (
             Path(config["paths"]["responses_dir"])
             / model_name
             / "test"
             / f"hypothetical_{n_shots}shot.json"
         )
+        with open(test_hypothetical_responses_path, "r") as f:
+            test_hypothetical_responses = json.load(f)
 
         results = evaluate(
-            test_original_responses_path,
-            test_hypothetical_responses_path,
+            test_hypothetical_responses,
             model_name,
             n_shots=n_shots,
         )

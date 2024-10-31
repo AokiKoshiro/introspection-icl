@@ -71,6 +71,7 @@ def collect_hypothetical_responses(
                 "original_question": row.original_question,
                 "response": response,
                 "behavioral_property": row.behavioral_property,
+                "option_matching_ethical_stance": row.option_matching_ethical_stance,
             }
         )
 
