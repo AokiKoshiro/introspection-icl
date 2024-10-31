@@ -10,19 +10,22 @@ from utils import (ensure_directories, extract_behavioral_property,
 
 
 def evaluate(
+    test_original_responses: list,
     test_hypothetical_responses: list,
     model_name: str = "gpt-4o",
     n_shots: int = 10,
 ) -> pd.DataFrame:
     """Evaluate hypothetical response accuracy using test data responses"""
     results = []
-    for response_item in test_hypothetical_responses:
+    for original_response, hypothetical_response in zip(
+        test_original_responses, test_hypothetical_responses
+    ):
         correct_answer = extract_behavioral_property(
-            response_item["response"],
-            response_item["behavioral_property"],
-            response_item["option_matching_ethical_stance"],
+            original_response["response"],
+            hypothetical_response["behavioral_property"],
+            original_response["option_matching_ethical_stance"],
         )
-        is_correct = response_item["response"].lower().strip() == correct_answer
+        is_correct = hypothetical_response["response"].lower().strip() == correct_answer
 
         results.append({"model": model_name, "n_shots": n_shots, "correct": is_correct})
 
@@ -51,6 +54,12 @@ if __name__ == "__main__":
     ensure_directories(config)
     model_name = config["model"]["name"]
 
+    test_original_responses_path = (
+        Path(config["paths"]["responses_dir"]) / model_name / "test" / "original.json"
+    )
+    with open(test_original_responses_path, "r") as f:
+        test_original_responses = json.load(f)
+
     all_results = []
     for n_shots in config["few_shot"]["n_shots_list"]:
         test_hypothetical_responses_path = (
@@ -63,6 +72,7 @@ if __name__ == "__main__":
             test_hypothetical_responses = json.load(f)
 
         results = evaluate(
+            test_original_responses,
             test_hypothetical_responses,
             model_name,
             n_shots=n_shots,
