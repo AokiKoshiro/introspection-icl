@@ -4,12 +4,12 @@ model:
 
 # Dataset settings
 n_samples:
-  train: 100
-  test: 50
+  train: 1024
+  test: 100
 
 # Few-shot learning settings
 few_shot:
-  n_shots_list: [0, 4, 8, 16, 32, 64, 100]
+  n_shots_list: [512]
 
 # File paths
 paths:
