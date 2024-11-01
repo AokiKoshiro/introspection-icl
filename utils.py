@@ -2,6 +2,7 @@ import random
 from pathlib import Path
 from typing import Dict, List, Optional
 
+import anthropic
 import yaml
 from openai import OpenAI
 from pydantic import BaseModel
@@ -64,27 +65,29 @@ def load_dataset(directory: str, n_samples: int = None) -> List[DataRow]:
 def get_model_response(
     messages: List[Dict[str, str]],
     model_name: str = "gpt-4o",
+    max_tokens: int = 1024,
     temperature: float = 0,
 ) -> str:
     """Get response from specified model"""
     if "gpt" in model_name:
         client = OpenAI()
-        completion = client.chat.completions.create(
-            model=model_name, messages=messages, temperature=temperature
+        response = client.chat.completions.create(
+            model=model_name,
+            max_tokens=max_tokens,
+            messages=messages,
+            temperature=temperature,
         )
-        return completion.choices[0].message.content
+        return response.choices[0].message.content
 
-    # elif "claude" in model_name:
-    #     client = anthropic.Anthropic()
-    #     message = client.messages.create(
-    #         model=model_name,
-    #         messages=[
-    #             {"role": m["role"], "content": [{"type": "text", "text": m["content"]}]}
-    #             for m in messages
-    #         ],
-    #         temperature=temperature,
-    #     )
-    #     return message.content[0].text
+    elif "claude" in model_name:
+        client = anthropic.Anthropic()
+        response = client.messages.create(
+            model=model_name,
+            max_tokens=max_tokens,
+            messages=messages,
+            temperature=temperature,
+        )
+        return response.content[0].text
 
 
 def extract_behavioral_property(
