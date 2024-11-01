@@ -22,7 +22,7 @@ def evaluate(
     ):
         correct_answer = extract_behavioral_property(
             original_response["response"],
-            hypothetical_response["behavioral_property"],
+            original_response["behavioral_property"],
             original_response["option_matching_ethical_stance"],
         )
         is_correct = hypothetical_response["response"].lower().strip() == correct_answer
