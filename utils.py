@@ -93,6 +93,7 @@ def get_model_response(
 def filter_invalid_responses(responses: list) -> list:
     invalid_phrases = [
         "i cannot",
+        "I can't",
         "i apologize",
         "unable to predict",
     ]
