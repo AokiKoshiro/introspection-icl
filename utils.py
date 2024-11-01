@@ -90,6 +90,20 @@ def get_model_response(
         return response.content[0].text
 
 
+def filter_invalid_responses(responses: list) -> list:
+    invalid_phrases = [
+        "i cannot",
+        "i apologize",
+        "unable to predict",
+    ]
+    filtered = []
+    for response in responses:
+        response_text = response["response"].lower()
+        if not any(phrase in response_text for phrase in invalid_phrases):
+            filtered.append(response)
+    return filtered
+
+
 def extract_behavioral_property(
     response: str,
     property_type: str,

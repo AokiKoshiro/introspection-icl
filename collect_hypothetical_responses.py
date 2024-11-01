@@ -5,7 +5,8 @@ from pathlib import Path
 from tqdm import tqdm
 
 from utils import (ensure_directories, extract_behavioral_property,
-                   get_model_response, load_config, load_dataset, set_seed)
+                   filter_invalid_responses, get_model_response, load_config,
+                   load_dataset, set_seed)
 
 
 def create_examples(train_data: list, train_original_responses: list) -> list:
@@ -16,12 +17,13 @@ def create_examples(train_data: list, train_original_responses: list) -> list:
             response_item["behavioral_property"],
             response_item["option_matching_ethical_stance"],
         )
-        examples.append(
-            {
-                "hypothetical_prompt": train_item.hypothetical_prompt[0].content,
-                "correct_answer": correct_answer,
-            }
-        )
+        if correct_answer != " " and correct_answer != "":
+            examples.append(
+                {
+                    "hypothetical_prompt": train_item.hypothetical_prompt[0].content,
+                    "correct_answer": correct_answer,
+                }
+            )
 
     return examples
 
@@ -56,16 +58,20 @@ def collect_hypothetical_responses(
 ) -> None:
     """Collect and save hypothetical responses with few-shot learning"""
     responses = []
+    output_path = (
+        Path(config["paths"]["responses_dir"])
+        / model_name
+        / "test"
+        / f"hypothetical_{n_shots}shot.json"
+    )
+
     for i, row in enumerate(
         tqdm(test_data, desc=f"Collecting hypothetical responses ({n_shots} shots)")
     ):
-        # Use index as seed for reproducibility
         few_shot_prompt = create_few_shot_prompt(
             few_shot_examples, row.hypothetical_prompt[0].content, n_shots, seed=i
         )
-
         response = get_model_response(messages=few_shot_prompt, model_name=model_name)
-
         responses.append(
             {
                 "original_question": row.original_question,
@@ -75,14 +81,8 @@ def collect_hypothetical_responses(
             }
         )
 
-    output_path = (
-        Path(config["paths"]["responses_dir"])
-        / model_name
-        / "test"
-        / f"hypothetical_{n_shots}shot.json"
-    )
-    with open(output_path, "w") as f:
-        json.dump(responses, f, indent=2)
+        with open(output_path, "w") as f:
+            json.dump(responses, f, indent=2)
 
 
 if __name__ == "__main__":
@@ -101,6 +101,7 @@ if __name__ == "__main__":
     )
     with open(train_original_responses_path, "r") as f:
         train_original_responses = json.load(f)
+    train_original_responses = filter_invalid_responses(train_original_responses)
 
     few_shot_examples = create_examples(train_data, train_original_responses)
 
